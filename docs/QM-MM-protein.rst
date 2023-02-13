@@ -393,10 +393,10 @@ For completeness, the inputfile for a QM/MM geometry optimization should look so
 
     #Run QM/MM geometry optimization using geomeTRIC optimizer and HDLC coordinates
     #Only active-region passed to optimizer
-    geomeTRICOptimizer(theory=qmmmobject, fragment=frag, ActiveRegion=True, actatoms=actatomslist, maxiter=500, coordsystem='hdlc')
+    geomeTRICOptimizer(theory=qmmmobject, fragment=frag, ActiveRegion=True, actatoms=actatomslist, maxiter=500, coordsystem='hdlc', charge=charge,mult=mult)
 
     #Write a PDB-file of the final coordinates.
-    write_pdbfile(frag, outputname="OptimizedFragment.pdb",openmmobject=openmmobject, charge=charge,mult=mult)
+    write_pdbfile(frag, outputname="OptimizedFragment.pdb",openmmobject=openmmobject)
 
 
 
